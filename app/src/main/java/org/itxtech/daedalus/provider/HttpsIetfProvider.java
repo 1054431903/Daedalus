@@ -22,21 +22,13 @@ import java.util.concurrent.TimeUnit;
  * (at your option) any later version.
  */
 public class HttpsIetfProvider extends HttpsProvider {
-    // implemented https://tools.ietf.org/html/draft-ietf-doh-dns-over-https-11
-
     private static final OkHttpClient HTTP_CLIENT = new OkHttpClient.Builder()
             .connectTimeout(10, TimeUnit.SECONDS)
             .readTimeout(10, TimeUnit.SECONDS)
             .writeTimeout(10, TimeUnit.SECONDS)
-            .addInterceptor((chain) -> {
-                Request original = chain.request();
-
-                Request request = original.newBuilder()
-                        .header("Accept", "application/dns-message")
-                        .build();
-
-                return chain.proceed(request);
-            })
+            .addInterceptor((chain) -> chain.proceed(chain.request().newBuilder()
+                    .header("Accept", "application/dns-message")
+                    .build()))
             .build();
 
     public HttpsIetfProvider(ParcelFileDescriptor descriptor, DaedalusVpnService service) {
@@ -53,7 +45,8 @@ public class HttpsIetfProvider extends HttpsProvider {
                 Request request = new Request.Builder()
                         .url(HttpUrl.parse(HTTPS_SUFFIX + uri).newBuilder()
                                 .addQueryParameter("dns", Base64.encodeToString(
-                                        message.asBuilder().setId(0).build().toArray(), Base64.DEFAULT))
+                                        message.asBuilder().setId(0).build().toArray(),
+                                        Base64.URL_SAFE | Base64.NO_PADDING | Base64.NO_WRAP))
                                 .build())
                         .get()
                         .build();

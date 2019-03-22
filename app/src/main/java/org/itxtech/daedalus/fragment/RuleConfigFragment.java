@@ -11,11 +11,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.preference.EditTextPreference;
 import android.preference.ListPreference;
-import android.support.design.widget.Snackbar;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import com.google.android.material.snackbar.Snackbar;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -61,7 +61,6 @@ public class RuleConfigFragment extends ConfigFragment {
     public void onDestroy() {
         super.onDestroy();
 
-        Daedalus.configurations.save();
         stopThread();
         intent = null;
         mHandler.shutdown();

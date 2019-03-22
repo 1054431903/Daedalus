@@ -4,8 +4,8 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.preference.*;
-import android.support.design.widget.Snackbar;
 import android.view.View;
+import com.google.android.material.snackbar.Snackbar;
 import org.itxtech.daedalus.Daedalus;
 import org.itxtech.daedalus.R;
 import org.itxtech.daedalus.activity.MainActivity;
@@ -102,6 +102,11 @@ public class GlobalConfigFragment extends PreferenceFragment {
 
         findPreference("settings_manual").setOnPreferenceClickListener(preference -> {
             Daedalus.openUri("https://github.com/iTXTech/Daedalus/wiki");
+            return false;
+        });
+
+        findPreference("settings_privacy_policy").setOnPreferenceClickListener(preference -> {
+            Daedalus.openUri("https://github.com/iTXTech/Daedalus/wiki/Privacy-Policy");
             return false;
         });
 

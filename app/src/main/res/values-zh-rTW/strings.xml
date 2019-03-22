@@ -52,6 +52,7 @@
     <string name="settings_notification">顯示通知</string>
     <string name="settings_check_update">檢查更新</string>
     <string name="settings_update_summary">造訪 GitHub 發行頁面。</string>
+    <string name="settings_privacy_policy">隱私政策</string>
     <string name="settings_count_number_of_queries">統計 DNS 查詢次數</string>
     <string name="settings_bug_report">回報 Bug</string>
     <string name="settings_issue_summary">前往 GitHub 送出 Bug 回饋。</string>
@@ -59,7 +60,7 @@
     <string name="settings_help_and_support">支援與說明</string>
     <string name="settings_advanced">進階系統設定</string>
     <string name="settings_advanced_on">開啟</string>
-    <string name="settings_local_rules_resolution">本機規則解析</string>
+    <string name="settings_local_rules_resolver">本機規則解析</string>
     <string name="settings_manual">使用手冊</string>
     <string name="settings_manual_summary">造訪 GitHub wiki 頁面。</string>
     <string name="settings_log_size">紀錄檔大小限制</string>
@@ -84,6 +85,9 @@
 
     <string name="server_pdomo_primary">PdoMo DNS 主伺服器</string>
     <string name="server_pdomo_secondary">PdoMo DNS 輔伺服器</string>
+    <string name="server_puredns_south_china">PureDNS 華南</string>
+    <string name="server_puredns_north_china">PureDNS 華北</string>
+    <string name="server_rubyfish">紅魚 (DoH)</string>
 
     <string name="primary_server">主要 DNS 伺服器</string>
     <string name="secondary_server">次要 DNS 伺服器</string>

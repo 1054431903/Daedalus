@@ -51,6 +51,7 @@
     <string name="settings_notification">Show Notification</string>
     <string name="settings_check_update">Check Update</string>
     <string name="settings_update_summary">Visit GitHub Releases Page.</string>
+    <string name="settings_privacy_policy">Privacy Policy</string>
     <string name="settings_count_number_of_queries">Count DNS Query Times</string>
     <string name="settings_bug_report">Report a Bug</string>
     <string name="settings_issue_summary">Submit an Issue on GitHub Issues Page.</string>
@@ -58,7 +59,7 @@
     <string name="settings_help_and_support">Help &amp; Support</string>
     <string name="settings_advanced">Advanced System Settings</string>
     <string name="settings_advanced_on">On</string>
-    <string name="settings_local_rules_resolution">Local Rules Resolution</string>
+    <string name="settings_local_rules_resolver">Local Rules Resolver</string>
     <string name="settings_log_size">Log Size Limit</string>
     <string name="settings_manual">Manual</string>
     <string name="settings_manual_summary">Visit GitHub wiki page.</string>
@@ -70,7 +71,7 @@
     <string name="settings_dns_tcp">TCP</string>
     <string name="settings_dns_udp">UDP</string>
     <string name="settings_dns_tls">TLS</string>
-    <string name="settings_dns_https_ietf">HTTPS (IETF draft)</string>
+    <string name="settings_dns_https_ietf">HTTPS (RFC8484)</string>
     <string name="settings_dns_https_json">HTTPS (Google JSON)</string>
 
     <string name="settings_rule_name">Rule Name</string>
@@ -89,6 +90,9 @@
 
     <string name="server_pdomo_primary">PdoMo DNS Primary</string>
     <string name="server_pdomo_secondary">PdoMo DNS Secondary</string>
+    <string name="server_puredns_south_china">PureDNS South China</string>
+    <string name="server_puredns_north_china">PureDNS North China</string>
+    <string name="server_rubyfish">rubyfish (DoH)</string>
 
     <string name="primary_server">Primary DNS server</string>
     <string name="secondary_server">Secondary DNS server</string>
